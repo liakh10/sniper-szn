@@ -1,6 +1,6 @@
 import { Chakra_Petch, Inter, Space_Mono } from "next/font/google";
 
-// Sniper Szn identity — a techno HUD/terminal display (Chakra Petch), unused
+// Trench Sniper identity — a techno HUD/terminal display (Chakra Petch), unused
 // elsewhere in the hub (distinct from Anton / Space Grotesk / Bangers / Bungee /
 // Orbitron / Titan One / Fredoka / Cinzel / Bricolage / Baloo / Fraunces). Space
 // Mono drives the screener digits/tickers (JetBrains & IBM Plex Mono are taken).

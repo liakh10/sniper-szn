@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { CA, TICKER, X_URL, NOXA_URL, DEX_URL, isRealCA } from "./config";
+import { CA, TICKER, X_URL, PUMP_URL, DEX_URL, isRealCA } from "./config";
 import { XIcon, ComboIcon, TrophyIcon } from "./art/icons";
 import { crosshairSvg } from "./art/board";
 import { getSfx } from "./sfx";
@@ -27,7 +27,7 @@ const HOW = [
 
 const NOTES = [
   { h: "wtf is this", b: "The trending board is a slot machine. Sixteen thousand tokens a day, and your finger is the only thing between a snipe and a rug." },
-  { h: "the chain", b: "Built for Robinhood Chain, where retail piled in and the board never stopped moving. $SNIPE runs on that chaos." },
+  { h: "the chain", b: "Built for the Solana trenches, where retail piles in and the board never stops moving. $TRENCHPER runs on that chaos." },
   { h: "the rug", b: "One red card ends everything. No stop-loss, no undo. Reflexes and restraint — that's the whole edge." },
 ];
 
@@ -62,7 +62,7 @@ function BuyLinks({ small }: { small?: boolean }) {
   const cls = small ? "btn btn-sm" : "btn";
   return (
     <div className="buy">
-      <a className={`${cls} btn-neon`} href={isRealCA() ? NOXA_URL + CA : NOXA_URL} target="_blank" rel="noreferrer">NOXA</a>
+      <a className={`${cls} btn-neon`} href={isRealCA() ? PUMP_URL + CA : PUMP_URL} target="_blank" rel="noreferrer">Pump Fun</a>
       <a className={`${cls} btn-ghost`} href={isRealCA() ? DEX_URL + CA : DEX_URL} target="_blank" rel="noreferrer">DexScreener</a>
     </div>
   );
@@ -102,7 +102,7 @@ export default function Home() {
       <Enter />
       <main>
         <header className="nav">
-          <a href="#top" className="brand"><BrandMark /> <b>Sniper Szn</b> <span className="brand-ticker">{TICKER}</span></a>
+          <a href="#top" className="brand"><BrandMark /> <b>Trench Sniper</b> <span className="brand-ticker">{TICKER}</span></a>
           <nav className="nav-links">{NAV.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}</nav>
           <div className="nav-actions">
             <button className="icon-btn" onClick={toggleMute} title="sound">{muted ? "off" : "on"}</button>
@@ -112,8 +112,8 @@ export default function Home() {
         </header>
 
         <section id="top" className="hero">
-          <span className="pill reveal">reflex sniper · on Robinhood Chain</span>
-          <h1 className="hero-title reveal">SNIPER SZN</h1>
+          <span className="pill reveal">reflex sniper · on Solana</span>
+          <h1 className="hero-title reveal">TRENCH SNIPER</h1>
           <p className="hero-sub reveal">Watch the board. Tap the green pumps. Never touch a rug.</p>
           <div id="play" className="reveal"><GameCanvas /></div>
           <div className="hero-token reveal"><CABlock /><BuyLinks small /></div>
@@ -142,7 +142,7 @@ export default function Home() {
 
         <footer className="footer">
           <div className="footer-top reveal">
-            <a href="#top" className="brand"><BrandMark /> <b>Sniper Szn</b></a>
+            <a href="#top" className="brand"><BrandMark /> <b>Trench Sniper</b></a>
             <div className="footer-links"><a href="#play">Snipe</a><a href="#how">How</a><a href="#records">Records</a><a href="/docs">Docs</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x" aria-label="X"><XIcon size={14} /></a></div>
           </div>
           <div className="footer-buy reveal"><CABlock /><BuyLinks small /></div>

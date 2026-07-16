@@ -54,7 +54,7 @@ export default function Enter() {
     <div className={`enter ${leaving ? "enter-leaving" : ""}`}>
       {phase === "boot" && (
         <div className="boot">
-          <p className="boot-title">SNIPER SZN</p>
+          <p className="boot-title">TRENCH SNIPER</p>
           <div className="boot-bar"><span className="boot-fill" style={{ width: `${pct}%` }} /></div>
           <p className="boot-pct">{pct}%</p>
           <ul className="boot-log">{lines.map((l, i) => <li key={i}><span className="boot-ok">›</span> {l}…</li>)}</ul>

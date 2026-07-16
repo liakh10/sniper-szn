@@ -2,11 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { CA, TICKER, NOXA_URL, DEX_URL, isRealCA } from "../config";
+import { CA, TICKER, PUMP_URL, DEX_URL, isRealCA } from "../config";
 import { crosshairSvg } from "../art/board";
 
 const SECTIONS = [
-  { id: "overview", label: "What is Sniper Szn?" },
+  { id: "overview", label: "What is Trench Sniper?" },
   { id: "controls", label: "Gameplay & Controls" },
   { id: "cards", label: "Card States" },
   { id: "scoring", label: "Scoring & Combos" },
@@ -48,7 +48,7 @@ export default function DocsContent() {
   return (
     <>
       <header className="nav">
-        <Link href="/#top" className="brand"><BrandMark /> <b>Sniper Szn</b> <span className="brand-ticker">{TICKER}</span></Link>
+        <Link href="/#top" className="brand"><BrandMark /> <b>Trench Sniper</b> <span className="brand-ticker">{TICKER}</span></Link>
         <nav className="nav-links">
           <Link href="/#play">Snipe</Link>
           <Link href="/#how">How</Link>
@@ -70,19 +70,19 @@ export default function DocsContent() {
 
         <main className="docs-main">
           <div className="docs-hero">
-            <h1>Sniper Szn Docs</h1>
+            <h1>Trench Sniper Docs</h1>
             <p>Everything about the reflex-tap board, scoring, and {TICKER} — in one page.</p>
           </div>
 
           <section id="overview" ref={(el) => { refs.current.overview = el; }} className="docs-section">
-            <h2>What is Sniper Szn?</h2>
+            <h2>What is Trench Sniper?</h2>
             <p>
-              Sniper Szn is a reflex-tap trending-board game, playable instantly in the browser — no
+              Trench Sniper is a reflex-tap trending-board game, playable instantly in the browser — no
               download, no signup. New token cards spawn into a fixed grid every second; tap the pumps,
               never touch a rug.
             </p>
             <div className="docs-table">
-              <Row label="Ticker">{TICKER} (Robinhood Chain, fair launch)</Row>
+              <Row label="Ticker">{TICKER} (Solana, fair launch)</Row>
               <Row label="Format">Single-player reflex-tap grid, one-mistake-and-you&apos;re-rekt</Row>
               <Row label="Grid">6 slots on a fixed board</Row>
               <Row label="Cost to play">Free, unlimited, no wallet required</Row>
@@ -126,11 +126,11 @@ export default function DocsContent() {
             <h2>{TICKER} Token</h2>
             <p>The game has no in-game currency or shop — {TICKER} is a separate community token that doesn&apos;t affect gameplay, card spawns, or scoring in any way.</p>
             <div className="docs-table">
-              <Row label="Chain">Robinhood Chain — not Solana</Row>
+              <Row label="Chain">Solana</Row>
               <Row label="Contract">{real ? <code className="mono">{CA}</code> : "SOON — not launched yet"}</Row>
-              <Row label="Launch style">Fair launch on NOXA, no presale, no team allocation</Row>
+              <Row label="Launch style">Fair launch on Pump Fun, no presale, no team allocation</Row>
               <Row label="Buy links">
-                <a href={real ? NOXA_URL + CA : NOXA_URL} target="_blank" rel="noreferrer">NOXA</a>
+                <a href={real ? PUMP_URL + CA : PUMP_URL} target="_blank" rel="noreferrer">Pump Fun</a>
                 {" · "}
                 <a href={real ? DEX_URL + CA : DEX_URL} target="_blank" rel="noreferrer">DexScreener</a>
               </Row>
@@ -161,7 +161,7 @@ export default function DocsContent() {
             <h2>FAQ</h2>
             <dl className="docs-faq">
               <dt>Do I need a wallet to play?</dt>
-              <dd>No. Sniper Szn is fully playable free, with no connection of any kind.</dd>
+              <dd>No. Trench Sniper is fully playable free, with no connection of any kind.</dd>
               <dt>Is tapping a fresh card always risky?</dt>
               <dd>Yes — it hasn&apos;t revealed yet, so there&apos;s always a chance it turns out to be a rug.</dd>
               <dt>Is {TICKER} live yet?</dt>

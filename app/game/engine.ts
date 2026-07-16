@@ -1,4 +1,4 @@
-// Sniper Szn — reflex tap over a trending board. Cards spawn into a fixed grid
+// Trench Sniper — reflex tap over a trending board. Cards spawn into a fixed grid
 // of slots, start "fresh" (unknown), then reveal as "pump" (green) or "rug"
 // (red). Tapping a pump snipes it for points; tapping a rug is instant REKT
 // (one-mistake rule). A missed pump just expires with no penalty. A rare

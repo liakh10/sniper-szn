@@ -13,10 +13,10 @@ export function crosshairSvg(ring: string, dot: string): string {
 }
 
 // Meme-ticker generator — evokes the sent screenshot without lifting real logos.
-const ROOTS = ["ROTH", "WIF", "PEPE", "BONK", "DOGE", "HOOD", "CHAD", "GM", "NGMI", "MOON", "APE", "GOOSE",
-  "TREMP", "VLAD", "SEED", "BOOR", "FIGS", "TYLEE", "NOXA", "BULL", "WOJAK", "MILADY", "SIGMA", "COPE",
-  "FOMO", "REKT", "LAMBO", "DIAMOND", "PAPER", "SAFU", "DEGEN", "PUMP", "SNIPE", "HODL", "4663"];
-const SUFFIX = ["", "", "", "2.0", "INU", "AI", "X", "COIN", "FI", "DAO", "69", "CTO", "ROBIN"];
+const ROOTS = ["SEND", "WIF", "PEPE", "BONK", "DOGE", "TRENCH", "CHAD", "GM", "NGMI", "MOON", "APE", "GOOSE",
+  "ALPHA", "GIGA", "SEED", "BOOR", "FIGS", "TYLEE", "JEET", "BULL", "WOJAK", "MILADY", "SIGMA", "COPE",
+  "FOMO", "REKT", "LAMBO", "DIAMOND", "PAPER", "SAFU", "DEGEN", "PUMP", "BASED", "HODL", "MEV"];
+const SUFFIX = ["", "", "", "2.0", "INU", "AI", "X", "COIN", "FI", "DAO", "69", "CTO", "MAXI"];
 
 export function randomTicker(): string {
   const r = ROOTS[Math.floor(Math.random() * ROOTS.length)];

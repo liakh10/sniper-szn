@@ -5,7 +5,7 @@ import { display, sans, mono } from "./fonts";
 
 export const metadata: Metadata = {
   title: TICKER, // tab title is always just the ticker
-  description: `${TOKEN_NAME} — watch the board, tap the green pumps, never touch a rug. A reflex sniper for the trenches, on Robinhood Chain.`,
+  description: `${TOKEN_NAME} — watch the board, tap the green pumps, never touch a rug. A reflex sniper for the Solana trenches.`,
 };
 
 export const viewport = { themeColor: "#0b0e14" };
